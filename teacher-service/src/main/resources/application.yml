@@ -1,0 +1,24 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+server:
+  port: 9091
+spring:
+  application:
+    name: teacher-service
+  datasource:
+    username: hobject
+    password:
+    url: jdbc:postgresql://localhost:5432/hobject
+  jpa:
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+

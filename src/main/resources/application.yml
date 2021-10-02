@@ -1,0 +1,10 @@
+
+spring:
+  application:
+    name: school-management-system
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+server:
+  port: 8761
