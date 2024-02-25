@@ -1,10 +1,24 @@
-
-spring:
-  application:
-    name: school-management-system
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: true
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: schoolManagementServer
 server:
-  port: 8761
+  port: 9091
+spring:
+  application:
+    name: School-Management-Service
+  datasource:
+    username: hobject
+    password: hobject
+    url: jdbc:postgresql://localhost:5432/school
+  jpa:
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
